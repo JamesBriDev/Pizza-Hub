@@ -1,0 +1,385 @@
+/* ===========================================
+   ORDER PAGE RESPONSIVE CSS - ANDROID → DESKTOP
+   Mobile-First: Smallest screens first → Largest
+   Add this to your existing <style> section
+============================================= */
+
+/* BASE STYLES - All Devices */
+* {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+body {
+    background-attachment: fixed !important;
+    -webkit-background-size: cover;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Form base styles */
+#orderForm .form-control,
+#orderForm .form-select {
+    border-radius: 12px;
+    border: 2px solid #dee2e6;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+#orderForm .form-control:focus,
+#orderForm .form-select:focus {
+    border-color: #ffc107 !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25) !important;
+    transform: scale(1.02);
+}
+
+/* ===========================================
+   1. ANDROID/iPhone SMALLEST (320px - 374px)
+   iPhone SE, Galaxy A10/A01, budget phones
+============================================= */
+@media (max-width: 374.98px) {
+    .container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        margin-top: 1rem !important;
+    }
+    
+    /* Compact navbar */
+    .navbar-brand img {
+        width: 140px !important;
+        height: 65px !important;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.5rem;
+    }
+    
+    /* Full-width form - Extra compact */
+    .col-md-6.mx-auto {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .bg-dark.text-white {
+        padding: 1.5rem 1.25rem !important;
+        border-radius: 16px !important;
+    }
+    
+    h2.text-center {
+        font-size: 1.4rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .form-label {
+        font-size: 0.95rem !important;
+    }
+    
+    .form-control,
+    .form-select {
+        font-size: 16px !important; /* iOS zoom fix */
+        padding: 0.75rem 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    textarea.form-control {
+        resize: vertical;
+        min-height: 80px !important;
+    }
+    
+    .btn {
+        font-size: 1rem !important;
+        padding: 0.75rem 2rem !important;
+        border-radius: 25px !important;
+        min-height: 48px;
+    }
+    
+    /* Compact footer */
+    .footer-icons i {
+        font-size: 1.3rem !important;
+    }
+    
+    footer {
+        padding: 1.5rem 1rem !important;
+    }
+}
+
+/* ===========================================
+   2. ANDROID/iPhone SMALL (375px - 575px)
+   iPhone 12 mini, Galaxy S20 FE, Pixel 4a
+============================================= */
+@media (min-width: 375px) and (max-width: 575.98px) {
+    .navbar-brand img {
+        width: 160px !important;
+        height: 70px !important;
+    }
+    
+    .bg-dark.text-white {
+        padding: 2rem 1.5rem !important;
+    }
+    
+    h2.text-center {
+        font-size: 1.6rem !important;
+    }
+    
+    .form-control,
+    .form-select {
+        padding: 0.875rem 1.125rem !important;
+    }
+}
+
+/* ===========================================
+   3. ANDROID/iPhone MEDIUM (576px - 767px)
+   iPhone 14/15, Galaxy S21/S22, Pixel 6/7/8
+============================================= */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .col-md-6.mx-auto {
+        max-width: 540px;
+    }
+    
+    .bg-dark.text-white {
+        padding: 2.5rem 2rem !important;
+        border-radius: 20px !important;
+    }
+    
+    h2.text-center {
+        font-size: 1.8rem !important;
+    }
+    
+    .form-label {
+        font-size: 1.05rem !important;
+    }
+}
+
+/* ===========================================
+   4. TABLET PORTRAIT (768px - 991px)
+   iPad Mini, Galaxy Tab A, large phones landscape
+============================================= */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar-brand img {
+        width: 200px !important;
+        height: 90px !important;
+    }
+    
+    .navbar-collapse {
+        margin-left: 2rem !important;
+    }
+    
+    .col-md-6.mx-auto {
+        max-width: 720px;
+    }
+    
+    .bg-dark.text-white {
+        padding: 3rem 2.5rem !important;
+        border-radius: 24px !important;
+    }
+    
+    h2.text-center {
+        font-size: 2.2rem !important;
+        margin-bottom: 2.5rem !important;
+    }
+    
+    .form-control,
+    .form-select {
+        padding: 1rem 1.25rem !important;
+        font-size: 1.1rem !important;
+    }
+    
+    textarea.form-control {
+        min-height: 100px !important;
+    }
+    
+    .btn {
+        font-size: 1.2rem !important;
+        padding: 1rem 3rem !important;
+    }
+}
+
+/* ===========================================
+   5. TABLET LANDSCAPE / SMALL LAPTOP (992px - 1199px)
+   iPad Pro 11", Surface Go, Chromebooks
+============================================= */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .col-md-6 {
+        max-width: 50% !important;
+    }
+    
+    .bg-dark.text-white {
+        padding: 3.5rem 3rem !important;
+    }
+}
+
+/* ===========================================
+   6. DESKTOP STANDARD (1200px - 1399px)
+   Most laptops, 24" monitors
+============================================= */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .bg-dark.text-white {
+        padding: 4rem 3.5rem !important;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.3) !important;
+    }
+    
+    h2.text-center {
+        font-size: 2.5rem !important;
+    }
+    
+    .btn {
+        padding: 1.25rem 4rem !important;
+        font-size: 1.3rem !important;
+    }
+}
+
+/* ===========================================
+   7. DESKTOP LARGE (1400px - 1919px)
+   27-32" monitors, 2K displays
+============================================= */
+@media (min-width: 1400px) and (max-width: 1919.98px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .col-md-6 {
+        max-width: 45% !important;
+    }
+}
+
+/* ===========================================
+   8. ULTRA WIDE / 4K (1920px+)
+   4K monitors, ultrawide 34"+
+============================================= */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .bg-dark.text-white {
+        padding: 5rem 4rem !important;
+        border-radius: 32px !important;
+    }
+    
+    .btn {
+        padding: 1.5rem 5rem !important;
+        font-size: 1.5rem !important;
+    }
+}
+
+/* ===========================================
+   NAVBAR SEARCH RESPONSIVE
+============================================= */
+@media (max-width: 991.98px) {
+    .navbar form.d-flex {
+        margin-top: 1rem;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .navbar .form-control,
+    .navbar .btn {
+        border-radius: 25px !important;
+        width: 100%;
+    }
+    
+    .navbar-collapse {
+        margin-left: 0 !important;
+    }
+}
+
+/* ===========================================
+   FOOTER RESPONSIVE
+============================================= */
+footer {
+    padding: 2.5rem 1.5rem;
+}
+
+.footer-icons {
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background: rgba(0,0,0,0.1);
+}
+
+.footer-icons a:hover {
+    transform: scale(1.25) rotate(10deg);
+    background: rgba(0,0,0,0.2);
+    color: #ffc107 !important;
+}
+
+/* ===========================================
+   FORM VALIDATION STATES
+============================================= */
+.form-check-input:checked {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+/* ===========================================
+   iOS/ANDROID UNIVERSAL FIXES
+============================================= */
+
+/* iOS zoom prevention */
+input, select, textarea {
+    font-size: 16px;
+}
+
+/* iOS Safari safe areas (notch) */
+@supports (padding: max(0px)) {
+    body {
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-top: env(safe-area-inset-top);
+    }
+    
+    .navbar {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* Android Chrome address bar */
+@supports not (-webkit-touch-callout: none) {
+    html {
+        height: -webkit-fill-available;
+    }
+    
+    body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+}
+
+/* Smooth animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .bg-dark {
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    .bg-dark:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.4) !important;
+    }
+}
